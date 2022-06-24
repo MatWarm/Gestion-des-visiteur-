@@ -1,0 +1,517 @@
+/* #######################################
+Feuille de style de l'application web GSB
+Auteur : Valentin
+Projet : Application GSB
+########################################*/
+
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans&display=swap');
+
+/*####################################################
+Sommaire :
+I - Initialisation global :
+    - Initialisation de la dimenssion  -> Ligne 28
+    - Initialisation des polices       -> Ligne 38
+    - Initialisation des inputs        -> Ligne 74
+    - Initialisation des boutons       -> Ligne 85
+    - Initialisation du séparateur     -> Ligne 109
+    - Initialisation des messages      -> Ligne 127
+
+II - Autres initialisations :
+    - Page de connexion                -> Ligne 162
+    - Page de l'application            -> Ligne 224
+    - Menu de l'application            -> Ligne 333
+    - Corps de l'application           -> Ligne 408
+    - Pied de l'application            -> Ligne 438
+####################################################*/
+
+/*##############################
+Initialisation de la dimenssion 
+##############################*/
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #77AADD;
+}
+
+/*#########################
+Initialisation des polices 
+#########################*/
+
+/* Les titres */
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    margin: 5px 0px;
+}
+
+h1{
+    font-size: 35px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+h3, h4, h5, h6{
+    font-size: 16px;
+}
+
+/* Balises de contenant du texte */
+a, p, input, button, select, option, label, textarea, strong, li{
+    font-family: 'Open-Sans', sans-serif;
+    font-size: 16px;
+    margin: 5px 0px;
+}
+
+/* Balise d'icone */
+i{
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Lien tableau interactions */
+.lienTableauInteractions{
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Tableau */
+table{
+    border: 1px solid #000;
+    padding: 10px
+}
+
+td{
+    border-top: solid 1px #000;
+    padding: 10px;
+}
+
+/*########################
+Initialisation des inputs 
+########################*/
+
+/* Titre d'un input */
+label{
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+/*#########################
+Initialisation des boutons
+#########################*/
+
+/* Bouton classique */
+.bouton{
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+button, .bouton{
+    background-color: unset;
+    color: #fff;
+    border: solid 2px #fff;
+    cursor: pointer;
+}
+
+/* Bouton de déconnexion */
+.bouton-deconnexion:hover{
+    background-color: #ab0000;
+    transition: 0.5s;
+}
+
+/*###########################
+Initialisation du séparateur 
+###########################*/
+
+span.separateur{
+    display: inline-block;
+    width: 11%;
+    margin-bottom: 5px;
+}
+
+.separateur-blanc{
+    border: solid 1px rgba(255, 255, 255, 20%);
+}
+
+.separateur-noir{
+    border: solid 1px rgba(0, 0, 0, 20%);
+}
+
+.separateur-noir2{
+    border: solid 1px rgba(0, 0, 0, 10%);
+}
+
+/*##########################
+Initialisation des messages 
+##########################*/
+
+/* Icone d'un message */
+.message i{
+    margin-right: 10px;
+}
+
+/* Message classique */
+.message{
+    display: flex;
+    align-items: center;
+    border: solid 2px;
+    padding: 10px;
+    margin: 5px 0px;
+    box-shadow: 1px 1px 1px #000;
+}
+
+.message-p{
+    color: #fff;
+}
+
+/* Message d'erreur */
+.message-erreur{
+    background-color: rgba(171, 0, 0, 75%) ;
+    border-color: #ab0000;
+}
+
+/* Message positif */
+.message-positif{
+    background-color: rgba(0, 129, 62, 75%);
+    border-color: #00813E;
+}
+
+/* Message informatif */
+.message-informatif{
+    background-color: rgba(129, 88, 0, 0.75);
+    border-color: #816300;
+}
+
+/*################
+Page de connexion 
+################*/
+
+/* Initialisation de la taille */
+.body-connexion{
+    margin: 10% 0%;
+}
+
+/* Initialisation du logo */
+.box-logo{
+    background-image: url(../img/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    height: 100px;
+    width: 100%;
+}
+
+/* Initialisation du titre */
+.box-connexion h1{
+    color: #fff;
+}
+
+/* Initialisation du cadre */
+.box-connexion{
+    margin: auto;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+/* Initialisation du formulaire de connexion */
+.box-connexion form>input,button{
+    margin: 5px;
+    padding: 10px;
+    width: 50%;
+}
+
+.box-connexion form>input{
+    background-color: unset;
+    border: none;
+    border-bottom: solid 2px #fff;
+    opacity: inherit;
+    color: #fff;
+    outline: none;
+}
+
+.box-connexion form>button{
+    margin: 20px 0px;
+}
+
+.box-connexion form>input:focus{
+    filter: opacity(50%);
+    transition: 0.5s;
+}
+
+.box-connexion form>button:focus{
+    filter: opacity(50%);
+}
+
+/*####################
+Page de l'application 
+####################*/
+
+/* Initialisation de l'entête */
+header{
+    display: flex;
+    background-color: rgba(0, 0, 0, 65%);
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+}
+
+/* Initialisation de la partie gauche de l'entête */
+.header-gauche{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Initialisation du logo */
+.header-gauche>.box-logo{
+    background-size: 80%;
+    width: 15%;
+}
+
+.titre-logo{
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Initialisation de la partie droite de l'entête */
+.header-droite{
+    display: inherit;
+    justify-content: right;
+    align-items: inherit;
+    width: 33%;
+}
+
+/* Initalisation d'un formulaire */
+.ligne-form{
+    margin: 15px 0px;
+    align-items: center;
+}
+
+.ligne-form input{
+    width: 50%;
+    border: none;
+    border-bottom: solid 1px #000;
+    outline: none;
+}
+
+.ligne-form textarea{
+    width: 50%;
+    border: solid 1px #000;
+    outline: none;
+    resize: none;
+}
+
+.ligne-form input:focus{
+    filter: opacity(50%);
+    transition: 0.5s;
+}
+
+.ligne-form-bouton{
+    display: flex;
+    justify-content: end;
+}
+
+.ligne-form input[type="button"], input[type="submit"], input[type="reset"]{
+    border: initial;
+    width: initial;
+    margin: 10px;
+    border: solid 1px rgba(0,0,0,50%);
+    background-color: unset;
+    padding: 10px;
+    width: 10%;
+    cursor: pointer;
+}
+
+.ligne-form input[type="checkbox"]{
+    width: 2%;
+}
+
+.ligne-form input[type="button"]:hover{
+    filter: opacity(50%);
+    transition: 0.5s;
+}
+
+.ligne-form>button{
+    border: initial;
+    width: initial;
+    margin: 10px;
+    border: solid 1px #000;
+    background-color: unset;
+    width: 10%;
+    color: #000;
+}
+
+.ligne-form button:hover{
+    filter: opacity(50%);
+    transition: 0.5s;
+}
+
+.ligne-form textarea:focus{
+    filter: opacity(50%);
+    transition: 0.5s;
+}
+
+/*####################
+Menu de l'application 
+####################*/
+
+.menu-lateral{
+    background-color: rgba(0, 0, 0, 50%);
+    width: 25%;
+}
+
+.menu-lateral h2,li,p,i,a{
+    color: #fff;
+    margin: 0px;
+}
+
+.menu-lateral i{
+    margin-right: 5px;
+}
+
+.menu-lateral ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+.menu-titre{
+    display: flex;
+    padding: 15px 10px;
+    margin: 0px;
+    align-items: center;
+}
+
+.menu-titre-principal{
+    background-color: rgba(0, 0, 0, 20%)
+}
+
+.menu-titre-principal>h2{
+    font-weight: 200;
+}
+
+.menu-sous-titre>a,p{
+    font-size: 16px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+a.menu-titre{
+    text-decoration: none;
+}
+
+.menu-sous-titre{
+    background-color: rgba(0, 0, 0, 10%)
+}
+
+.sous-menu{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sous-menu-lien{
+    display: block;
+    padding: 15px 10px;
+    padding-left: 42px;
+}
+
+a.sous-menu-lien{
+    text-decoration: none;
+}
+
+.sous-menu a:hover{
+    background-color: rgba(255, 255, 255, 10%);
+}
+
+.sous-menu a:focus{
+    background-color: rgba(255, 255, 255, 10%);
+}
+
+/*#####################
+Corps de l'application 
+#####################*/
+
+/* Initialisaiton du type d'affichage */
+.corps{
+    display: flex;
+}
+
+/* Initialisation de la dimenssion et de l'arriÃ¨re plan*/
+.corps-application{
+    display: grid;
+    margin: 50px;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.corps-application ul li{
+    color: #000;
+}
+
+.corps-application > a{
+    color: blue;
+}
+
+.entete-corps{
+    grid-row: 1;
+}
+
+/* Initialisation des titres et paragraph */
+.corps-application h1{
+    font-size: 25px;
+}
+
+.corps-application h3{
+    font-size: 20px;
+}
+
+.corps-application>p{
+    color: #000;
+}
+
+/* Design formulaire médicament */
+.formMedic{
+    grid-row: 2/10;
+}
+
+#tableauInteractions{
+    grid-row: 2;
+}
+
+#tableauInteractions tr > td:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* Design formulaire rapport visite */
+.ligne-form-ech {
+	margin: 15px 0px;
+	align-items: center;
+	display: none;
+}
+
+/*####################
+Pied de l'application 
+####################*/
+
+/* Initialisation de la police */
+footer h4,p{
+    font-weight: 200;
+    color: #fff;
+    margin: 0px;
+}
+
+/* Initialisation de la dimenssion et de l'arriÃ¨re plan */
+.pied-page{
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, 65%);
+}
